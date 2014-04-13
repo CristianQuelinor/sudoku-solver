@@ -1,7 +1,7 @@
 CC=gcc
 CFLAGS=-c -Wall
 LDFLAGS=
-SOURCES=prog.c fonctions.c
+SOURCES=prog.c fonctions.c list.c
 
 OBJECTS=$(SOURCES:.cpp=.o)
 EXECUTABLE=prog.out
