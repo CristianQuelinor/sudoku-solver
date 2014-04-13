@@ -50,13 +50,13 @@ void solve(int grid[9][9]) {
 		}
 	}
 
-	// Init, writting true where it's supposed to be
+	// Init
 	int t;
 	for (int row = 0 ; row < 9 ; row++) {
 		for (int column = 0 ; column < 9 ; column++) {
 			int t = grid[row][column];
 
-			if (t != 0) { // If the box's not empty - 1;
+			if (t != 0) { // If the box's not empty; // isInRow[row][t] = true <==> t+1 is in the row
 				t--;
 				isInRow[row][t] = true;
 				isInColumn[column][t] = true;
@@ -75,8 +75,7 @@ bool loadGrid(int grid[9][9]) {
 	FILE *file;
 	file = fopen ("../files/grid.in", "r");
 
-	if (file == NULL)
-	{
+	if (file == NULL) {
 		printf("Error: Couln't open grid");
 		return false;
 	}
@@ -89,16 +88,15 @@ bool loadGrid(int grid[9][9]) {
 
 		grid[row][column] = (int)(strtol(&c, NULL, 10));
 
-		if (column <= 9) {
+		if (column <= 9)
 			column += 1;
-		}
+			
 		if (column == 9) {
 			column = 0;
 			row += 1;
 
-			if (row == 9) {
+			if (row == 9)
 				break;
-			}
 		}
 	}
 
