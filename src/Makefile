@@ -1,4 +1,4 @@
-CC=g++
+CC=gcc
 CFLAGS=-c -Wall
 LDFLAGS=
 SOURCES=prog.c fonctions.c
