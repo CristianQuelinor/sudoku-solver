@@ -4,7 +4,7 @@ LDFLAGS=
 SOURCES=prog.c fonctions.c
 
 OBJECTS=$(SOURCES:.cpp=.o)
-EXECUTABLE=prog
+EXECUTABLE=prog.out
 
 all: $(SOURCES) $(EXECUTABLE)
 	
